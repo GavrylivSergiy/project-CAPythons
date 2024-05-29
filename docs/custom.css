@@ -1,0 +1,31 @@
+/* CSS стилі */
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    font-family: Arial, sans-serif; /* Додано для стилізації тексту */
+    color: rgb(250, 247, 247);(244, 239, 239); /* Додано для стилізації тексту */
+    font-size: 26px; /* Додано для зміни розміру шрифту */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Додаткові CSS стилі */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: blue;
+}
