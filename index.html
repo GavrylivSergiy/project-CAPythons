@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "CAPythonsBook 0.0.2";
+        var mkdocs_page_name = "CAPythonsBook";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -40,7 +41,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">CAPythonsBook 0.0.2</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">CAPythonsBook</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#httpstestpypiorgprojectcapythonsbook002description">https://test.pypi.org/project/CAPythonsBook/0.0.2/#description</a>
     </li>
@@ -77,7 +78,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">CAPythonsBook 0.0.2</li>
+      <li class="breadcrumb-item active">CAPythonsBook</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -86,9 +87,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="capythonsbook-002">CAPythonsBook 0.0.2</h1>
+                <h1 id="capythonsbook">CAPythonsBook</h1>
+<div class="container">
+    <img src="Background ZOOM.png" alt="Приклад зображення">
+    <div class="text-overlay"> </div>
+</div>
+
 <ul>
-<li>Цей проект має на меті створення консольного додатку для зберігання контактів, який буде розроблений мовою Python. Додаток дозволить користувачам зберігати інформацію про контакти, що можуть містити крім імен: номери телефонів, дні народження, адреса та email.   </li>
 <li>ПЕРСОНАЛЬНИЙ ПОМІЧНИК надає можливість також: виводити список контактів, у яких день народження через задану кількість днів від поточної дати; перевіряти правильність введеного номера телефону та email під час створення або редагування запису.
 Зберігати, проводити, пошук, редагувати та видаляти нотатки.</li>
 </ul>
@@ -107,52 +112,54 @@
 <li><em>[приклад]</em>  <code>Hello</code> ==&gt; "How can i help you" </li>
 <li></li>
 <li>add       <code>[ім'я] [телефон]</code>               Додає новий контакт у адресну книгу.</li>
-<li><em>[приклад]</em>  <code>[add] ["John 0967775522"]</code> ==&gt; "Contact "John 0967775522" added"</li>
+<li><em>[приклад]</em>  <code>[add] ["John 7777777777"]</code> ==&gt; "Контакт "John" додано з номером телефону "7777777777"</li>
 <li></li>
 <li>change         <code>[ім'я] [новий телефон]</code>                Змінює номер телефону існуючого контакту.</li>
-<li><em>[приклад]</em>  <code>[change] ["John 09611111111"]</code> ==&gt; "Contact "John" changed"</li>
+<li><em>[приклад]</em>  <code>[change] ["John 5555555555"]</code> ==&gt; "Телефон для контакту "John" змінено на 5555555555"</li>
 <li></li>
 <li>add-phone      <code>[ім'я] [телефон]</code>             Додає новий номер телефону до наявного контакту.</li>
-<li><em>[приклад]</em>  <code>[add-phone] ["John 096333333333"]</code> ==&gt; "Contact "John" added"</li>
+<li><em>[приклад]</em>  <code>[add-phone] ["John 3333333333"]</code> ==&gt; "Телефон 3333333333 додано до контакту "John""</li>
 <li></li>
 <li>add-birthday   <code>[ім'я] [дата народження]</code>        Додає день народження до наявного контакту.</li>
-<li><em>[приклад]</em>  <code>[ add-birthday] ["John 28.05.1985"]</code> ==&gt; "Contact "John" added'</li>
+<li><em>[приклад]</em>  <code>[ add-birthday] ["John 31.05.1980"]</code> ==&gt; "Дату народження для John встановлено на 31.05.1980'</li>
 <li></li>
 <li>all              <code>[ _ ]</code>                             Виводить всі контакти.</li>
-<li><em>[приклад]</em>  <code>[ all]</code> ==&gt; "Name John" phone "096111111111" birthday "28.05.1985"</li>
+<li><em>[приклад]</em>  <code>[ all]</code> ==&gt; "Name John phone "5555555555" birthday "31.05.1980"</li>
 <li></li>
 <li>search-contact  <code>[пошуковий запит]</code>              Шукає контакти за заданими критеріями.</li>
-<li><em>[приклад]</em>  <code>[search-contact]["John"]</code> ==&gt; "Contact "John" added'</li>
+<li><em>[приклад]</em>  <code>[search-contact]["John"]</code> ==&gt; "Contact name: John; phone: 7777777777; Address: Germany'</li>
 <li></li>
 <li>show-phone     <code>[ім'я]</code>                         Показує номер телефону контакту.</li>
-<li><em>[приклад]</em>  <code>[ show-phone] ["John"]</code> ==&gt; "Contact "John" added"</li>
+<li><em>[приклад]</em>  <code>[ show-phone] ["John"]</code> ==&gt; "Contact name: John; phone: 7777777777;"</li>
 <li></li>
 </ul>
 <h2 id="3">3. Зберігання та управління НОТАТКАМИ:</h2>
 <ul>
-<li>add-note        <code>[заголовок] [текст] [теги]</code>      Додає нову нотатку.</li>
-<li><em>[приклад]</em>  <code>[add-note] ["John"]</code> ==&gt; "Contact "John" added"</li>
-<li>edit-note       <code>[заголовок] [текст] [теги]</code>      Редагує наявну нотатку.</li>
-<li><em>[приклад]</em>  <code>[edit-note ] ["John"]</code> ==&gt; "Contact "John" added"</li>
-<li>delete-note     <code>[заголовок]</code>                     Видаляє наявну нотатку.</li>
-<li><em>[приклад]</em>  <code>[delete-note] ["John"]</code> ==&gt; "Contact "John" added"</li>
-<li>search-notes    <code>[пошуковий запит]</code>               Шукає нотатки за заданими критеріями.</li>
-<li><em>[приклад]</em>  <code>[search-notes] ["John"]</code> ==&gt; "Contact "John" added"</li>
+<li>add-note        <code>[заголовок] [текст] [#теги]</code>      Додає нову нотатку.</li>
+<li><em>[приклад]</em>  <code>[add-note] [man]</code> ==&gt; "Додано нотатку з заголовком: man"</li>
+<li>edit-note       <code>[ID] [текст] [#теги]</code>      Редагує наявну нотатку.</li>
+<li><em>[приклад]</em>  <code>[edit-note ] ["edit-note 84aedb3e-742c-4604-8dc2-a68c35641943 woman"]</code> ==&gt; "'new_title'"</li>
+<li>delete-note     <code>[ID]</code>                     Видаляє наявну нотатку.</li>
+<li><em>[приклад]</em>  <code>[delete-note] ["woman"]</code> ==&gt; "Нотатку з заголовком "woman" видалено.""</li>
+<li>search-notes    <code>[пошуковий запит/заголовок/текст/#теги]</code> Шукає нотатки за заданими критеріями.</li>
+<li><em>[приклад]</em>  <code>[search-notes] ["test1"]</code> ==&gt; 
+<img alt="Приклад зображення" src="%D0%BF%D1%80%D0%B8%D0%BA.png" /></li>
 <li>display-notes   <code>[ _ ]</code>                               Виводить всі нотатки.</li>
-<li><em>[приклад]</em>  <code>[display-notes] ["John"]</code> ==&gt; "Contact "John" added"</li>
+<li><em>[приклад]</em>  <code>[display-notes] ["John"]</code> ==&gt; 
+<img alt="Приклад зображення" src="notes.png" /></li>
 </ul>
 <h2 id="4">4. Зберігання даних та вихід з програми:</h2>
 <ul>
-<li>close           <code>[ _ ]</code>                              Зберігає адресну книгу та виходить з програми.</li>
-<li><em>[приклад]</em>  <code>[close]</code> ==&gt; "Contact "John" added"</li>
-<li>exit            <code>[ _ ]</code>                                Зберігає адресну книгу та виходить з програми.</li>
-<li><em>[приклад]</em>  <code>[exit]</code> ==&gt; "Contact "John" added"</li>
+<li>close           <code>[ _ ]</code>    Зберігає адресну книгу та виходить з програми.</li>
+<li><em>[приклад]</em>  <code>[close]</code> ==&gt; "До побачення!"</li>
+<li>exit            <code>[ _ ]</code>    Зберігає адресну книгу та виходить з програми.</li>
+<li><em>[приклад]</em>  <code>[exit]</code> ==&gt; "До побачення!"</li>
 </ul>
 <h2 id="5">5. Вибір мови:</h2>
 <ul>
-<li>set-language    <code>['en' або 'ua']</code>  Встановлює мову застосунку</li>
-<li><em>[приклад]</em>  <code>[set-language] [ua]</code> ==&gt; "Contact "John" added"</li>
-<li><em>[приклад]</em>  <code>[set-language] [en]</code> ==&gt; "Contact "John" added"</li>
+<li>set-language    <code>['en' або 'uk']</code>  Встановлює мову застосунку</li>
+<li><em>[приклад]</em>  <code>[set-language] [uk]</code> ==&gt; "Мову встановлено на українська"</li>
+<li><em>[приклад]</em>  <code>[set-language] [en]</code> ==&gt; "Мову встановлено на англійська"</li>
 </ul>
 <h2 id="capythonssuperbot">Контактна інформація <code>CAPythons@super.BOT</code></h2>
               
@@ -186,6 +193,7 @@
     <script>var base_url = ".";</script>
     <script src="js/theme_extra.js"></script>
     <script src="js/theme.js"></script>
+      <script src="custom.js"></script>
       <script src="search/main.js"></script>
     <script>
         jQuery(function () {
@@ -198,5 +206,5 @@
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-05-26 20:01:08.766458+00:00
+Build Date UTC : 2024-05-29 08:35:12.879361+00:00
 -->
